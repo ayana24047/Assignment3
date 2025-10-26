@@ -16,6 +16,8 @@
     </properties>
 
     <dependencies>
+
+
         <!-- Основная библиотека Jackson -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

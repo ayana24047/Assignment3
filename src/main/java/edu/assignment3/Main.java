@@ -12,23 +12,25 @@ public class Main {
         Map<String, Object> resultAll = new LinkedHashMap<>();
 
         File inputFile = new File(System.getProperty("user.dir") + "/ass_3_input.json");
-
         if (!inputFile.exists()) {
-            System.out.println("⚠️ File ass_3_input.json not found! Place it next to pom.xml");
+            System.out.println(" File ass_3_input.json not found! Place it next to pom.xml");
             return;
         }
 
         Map<String, List<Graph>> input = mapper.readValue(inputFile, new TypeReference<>() {});
         List<Graph> graphs = input.get("graphs");
 
+        // Счётчики для смещения окон, чтобы они не накладывались
+        int offsetX = 50;
+        int offsetY = 50;
+        int windowSpacing = 50;
+
         for (Graph g : graphs) {
             System.out.println("\n=== " + g.name + " ===");
-
-
             System.out.println("Vertices: " + g.vertices.size());
             System.out.println("Edges: " + g.edges.size());
 
-
+            // Запуск алгоритмов
             var primResult = PrimAlgorithm.run(g);
             var kruskalResult = KruskalAlgorithm.run(g);
 
@@ -39,9 +41,21 @@ public class Main {
             int primCost = (int) primResult.get("total_cost");
             int kruskalCost = (int) kruskalResult.get("total_cost");
 
-            // Print metrics
+            // Вывод метрик
             System.out.println("Prim → cost=" + primCost + ", operations=" + primOps + ", time=" + primTime + " ms");
             System.out.println("Kruskal → cost=" + kruskalCost + ", operations=" + kruskalOps + ", time=" + kruskalTime + " ms");
+
+            // Визуализация MST от Prim
+            List<Graph.Edge> mstEdges = g.edges.stream()
+                    .filter(e -> ((List<String>) primResult.get("edges")).contains(e.u + "-" + e.v + "(" + e.weight + ")") ||
+                            ((List<String>) primResult.get("edges")).contains(e.v + "-" + e.u + "(" + e.weight + ")"))
+                    .toList();
+
+            // Смещаем каждое окно по координатам, чтобы не накладывались
+            GraphVisualizer.showGraph(g, mstEdges, offsetX, offsetY);
+
+            offsetX += 50 + 600; // ширина окна + отступ
+            offsetY += 50;        // смещение по Y для диагонали
 
             resultAll.put(g.name, Map.of(
                     "Prim", primResult,
@@ -49,7 +63,7 @@ public class Main {
             ));
         }
 
-        // Save to output JSON
+        // Сохраняем результаты в JSON
         File outputFile = new File(System.getProperty("user.dir") + "/ass_3_output.json");
         mapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, resultAll);
 

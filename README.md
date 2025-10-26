@@ -5,14 +5,9 @@ The goal of this assignment was to apply Prim’s and Kruskal’s algorithms to 
 The program reads input graph data from ass_3_input.json, executes both algorithms, and generates ass_3_output.json containing performance metrics.
 
 Each dataset (small, medium, large) represents different network sizes:
+<img width="931" height="223" alt="image" src="https://github.com/user-attachments/assets/42b60d4d-3733-4cb5-b224-5b122ccf60a4" />
 
-Graph Name	Vertices	Edges	Algorithm	Total Cost	Operations	Execution Time (ms)
-small_graph_cities	5	6	Prim	17	9	0.28
-small_graph_cities	5	6	Kruskal	17	8	0.24
-medium_graph_cities	10	10	Prim	41	13	0.62
-medium_graph_cities	10	10	Kruskal	41	12	0.55
-large_graph_cities	20	20	Prim	82	28	1.03
-large_graph_cities	20	20	Kruskal	82	27	0.97
+
 
 (The numeric values are based on representative test runs and may slightly vary depending on system performance.)
 

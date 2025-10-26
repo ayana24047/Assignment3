@@ -88,55 +88,7 @@ After execution, a new file ass_3_output.json will appear in the root directory 
 
 
 
-Generated ass_3_output.json
+Generated ass_3_output.json <img width="1683" height="895" alt="image" src="https://github.com/user-attachments/assets/d70885f5-fb38-4b71-b251-fd5a753619ba" />
 
-{
-  "small_graph_cities" : {
-    "Prim" : {
-      "execution_time_ms" : 2.3953,
-      "operations" : 5,
-      "edges" : [ "Astana-Karaganda(3)", "Astana-Almaty(5)", "Almaty-Shymkent(4)", "Shymkent-Aktobe(7)" ],
-      "algorithm" : "Prim",
-      "total_cost" : 19
-    },
-    "Kruskal" : {
-      "execution_time_ms" : 0.8785,
-      "operations" : 5,
-      "edges" : [ "Astana-Karaganda(3)", "Almaty-Shymkent(4)", "Astana-Almaty(5)", "Shymkent-Aktobe(7)" ],
-      "algorithm" : "Kruskal",
-      "total_cost" : 19
-    }
-  },
-  "medium_graph_cities" : {
-    "Prim" : {
-      "execution_time_ms" : 0.0417,
-      "operations" : 7,
-      "edges" : [ "Astana-Karaganda(4)", "Astana-Pavlodar(6)", "Pavlodar-Ust-Kamenogorsk(4)", "Karaganda-Kostanay(7)", "Kostanay-Aktobe(6)", "Aktobe-Atyrau(5)" ],
-      "algorithm" : "Prim",
-      "total_cost" : 32
-    },
-    "Kruskal" : {
-      "execution_time_ms" : 0.0493,
-      "operations" : 10,
-      "edges" : [ "Shymkent-Taraz(2)", "Almaty-Taraz(3)", "Astana-Karaganda(4)", "Pavlodar-Ust-Kamenogorsk(4)", "Aktobe-Atyrau(5)", "Astana-Pavlodar(6)", "Kostanay-Aktobe(6)", "Karaganda-Kostanay(7)" ],
-      "algorithm" : "Kruskal",
-      "total_cost" : 37
-    }
-  },
-  "large_graph_cities" : {
-    "Prim" : {
-      "execution_time_ms" : 0.0568,
-      "operations" : 16,
-      "edges" : [ "Astana-Karaganda(3)", "Karaganda-Temirtau(2)", "Astana-Kokshetau(4)", "Kokshetau-Petropavl(3)", "Astana-Pavlodar(5)", "Pavlodar-Ekibastuz(2)", "Karaganda-Zhezkazgan(5)", "Pavlodar-Ust-Kamenogorsk(6)", "Ust-Kamenogorsk-Semey(2)", "Semey-Almaty(8)", "Almaty-Taldykorgan(2)", "Almaty-Taraz(3)", "Taraz-Shymkent(4)", "Shymkent-Turkistan(5)" ],
-      "algorithm" : "Prim",
-      "total_cost" : 54
-    },
-    "Kruskal" : {
-      "execution_time_ms" : 0.1001,
-      "operations" : 20,
-      "edges" : [ "Kostanay-Rudny(1)", "Almaty-Taldykorgan(2)", "Karaganda-Temirtau(2)", "Ust-Kamenogorsk-Semey(2)", "Ekibastuz-Pavlodar(2)", "Astana-Karaganda(3)", "Almaty-Taraz(3)", "Atyrau-Aktobe(3)", "Petropavl-Kokshetau(3)", "Astana-Kokshetau(4)", "Kostanay-Aktobe(4)", "Taraz-Shymkent(4)", "Astana-Pavlodar(5)", "Karaganda-Zhezkazgan(5)", "Atyrau-Oral(5)", "Turkistan-Shymkent(5)", "Ust-Kamenogorsk-Pavlodar(6)", "Almaty-Semey(8)" ],
-      "algorithm" : "Kruskal",
-      "total_cost" : 67
-    }
-  }
-}
+
+

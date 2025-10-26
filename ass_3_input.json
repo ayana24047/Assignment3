@@ -1,0 +1,60 @@
+{
+  "graphs": [
+    {
+      "name": "small_graph_cities",
+      "vertices": ["Astana", "Almaty", "Karaganda", "Shymkent", "Aktobe"],
+      "edges": [
+        {"u": "Astana", "v": "Almaty", "weight": 5},
+        {"u": "Astana", "v": "Karaganda", "weight": 3},
+        {"u": "Karaganda", "v": "Shymkent", "weight": 6},
+        {"u": "Almaty", "v": "Shymkent", "weight": 4},
+        {"u": "Shymkent", "v": "Aktobe", "weight": 7}
+      ]
+    },
+    {
+      "name": "medium_graph_cities",
+      "vertices": ["Astana", "Almaty", "Karaganda", "Shymkent", "Aktobe", "Pavlodar", "Taraz", "Kostanay", "Atyrau", "Ust-Kamenogorsk"],
+      "edges": [
+        {"u": "Astana", "v": "Karaganda", "weight": 4},
+        {"u": "Astana", "v": "Pavlodar", "weight": 6},
+        {"u": "Almaty", "v": "Taraz", "weight": 3},
+        {"u": "Shymkent", "v": "Taraz", "weight": 2},
+        {"u": "Aktobe", "v": "Atyrau", "weight": 5},
+        {"u": "Karaganda", "v": "Kostanay", "weight": 7},
+        {"u": "Kostanay", "v": "Aktobe", "weight": 6},
+        {"u": "Pavlodar", "v": "Ust-Kamenogorsk", "weight": 4},
+        {"u": "Astana", "v": "Ust-Kamenogorsk", "weight": 8},
+        {"u": "Almaty", "v": "Shymkent", "weight": 5}
+      ]
+    },
+    {
+      "name": "large_graph_cities",
+      "vertices": [
+        "Astana", "Almaty", "Karaganda", "Shymkent", "Aktobe", "Pavlodar", "Taraz", "Kostanay", "Atyrau", "Ust-Kamenogorsk",
+        "Petropavl", "Semey", "Taldykorgan", "Oral", "Ekibastuz", "Kokshetau", "Zhezkazgan", "Rudny", "Temirtau", "Turkistan"
+      ],
+      "edges": [
+        {"u": "Astana", "v": "Karaganda", "weight": 3},
+        {"u": "Astana", "v": "Pavlodar", "weight": 5},
+        {"u": "Astana", "v": "Kokshetau", "weight": 4},
+        {"u": "Astana", "v": "Ekibastuz", "weight": 6},
+        {"u": "Almaty", "v": "Taldykorgan", "weight": 2},
+        {"u": "Almaty", "v": "Shymkent", "weight": 7},
+        {"u": "Almaty", "v": "Taraz", "weight": 3},
+        {"u": "Almaty", "v": "Semey", "weight": 8},
+        {"u": "Karaganda", "v": "Zhezkazgan", "weight": 5},
+        {"u": "Karaganda", "v": "Temirtau", "weight": 2},
+        {"u": "Kostanay", "v": "Rudny", "weight": 1},
+        {"u": "Kostanay", "v": "Aktobe", "weight": 4},
+        {"u": "Atyrau", "v": "Oral", "weight": 5},
+        {"u": "Atyrau", "v": "Aktobe", "weight": 3},
+        {"u": "Ust-Kamenogorsk", "v": "Semey", "weight": 2},
+        {"u": "Ust-Kamenogorsk", "v": "Pavlodar", "weight": 6},
+        {"u": "Petropavl", "v": "Kokshetau", "weight": 3},
+        {"u": "Ekibastuz", "v": "Pavlodar", "weight": 2},
+        {"u": "Taraz", "v": "Shymkent", "weight": 4},
+        {"u": "Turkistan", "v": "Shymkent", "weight": 5}
+      ]
+    }
+  ]
+}

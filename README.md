@@ -1,41 +1,63 @@
 Assignment 3: Optimization of a City Transportation Network (MST)
 1. Summary of Input Data and Algorithm Results
+
 The goal of this assignment was to apply Prim’s and Kruskal’s algorithms to optimize a city’s transportation network by finding the Minimum Spanning Tree (MST).
 The program reads input graph data from ass_3_input.json, executes both algorithms, and generates ass_3_output.json containing performance metrics.
+
 Each dataset (small, medium, large) represents different network sizes:
-Graph NameVerticesEdgesAlgorithmTotal CostOperationsExecution Time (ms)small_graph_cities56Prim1790.28small_graph_cities56Kruskal1780.24medium_graph_cities1010Prim41130.62medium_graph_cities1010Kruskal41120.55large_graph_cities2020Prim82281.03large_graph_cities2020Kruskal82270.97
+
+Graph Name	Vertices	Edges	Algorithm	Total Cost	Operations	Execution Time (ms)
+small_graph_cities	5	6	Prim	17	9	0.28
+small_graph_cities	5	6	Kruskal	17	8	0.24
+medium_graph_cities	10	10	Prim	41	13	0.62
+medium_graph_cities	10	10	Kruskal	41	12	0.55
+large_graph_cities	20	20	Prim	82	28	1.03
+large_graph_cities	20	20	Kruskal	82	27	0.97
+
 (The numeric values are based on representative test runs and may slightly vary depending on system performance.)
+
 Both algorithms consistently produced identical MST total costs, confirming correctness.
 
 2. Performance Comparison
 Execution Efficiency
+
 For small and medium graphs, both algorithms performed similarly with minor differences in execution time.
-Kruskal’s algorithm was slightly faster in sparse graphs because it sorts fewer edges and uses the Union-Find structure efficiently.
+
+Kruskal’s algorithm was slightly faster in sparse graphs because it sorts fewer edges and efficiently uses the Union-Find structure.
+
 Prim’s algorithm performed better on denser graphs, benefiting from its adjacency-based expansion using a priority queue.
+
 Operation Count
-Kruskal’s required fewer operations overall since it checks each edge only once during sorting and union operations,
-while Prim’s performs additional poll() and add() calls for every new vertex added to the MST.
+
+Kruskal’s algorithm required fewer operations overall since it checks each edge only once during sorting and union operations.
+
+Prim’s algorithm performs additional poll() and add() calls for every new vertex added to the MST.
+
 3. Conclusions and Algorithm Preference
-Both Prim’s and Kruskal’s algorithms correctly found the minimum spanning tree.
-Their total MST costs matched for all datasets, verifying algorithmic accuracy.
+
+Both Prim’s and Kruskal’s algorithms correctly found the Minimum Spanning Tree (MST).
+Their total MST costs matched for all datasets, confirming algorithmic accuracy.
 
 Kruskal’s Algorithm
+
 Time complexity: O(E log E)
-Best for sparse graphs, where the number of edges (E) is close to the number of vertices (V).
-Simpler to implement using sorting and disjoint-set union operations.
+
+Best for: Sparse graphs (few edges compared to vertices).
+
+Advantages: Easier to implement using sorting and disjoint-set (Union-Find) operations.
 
 Prim’s Algorithm
-Time complexity: O(E log V) with a binary heap
 
-Performs better on dense graphs with many edges, due to efficient vertex-based expansion.
+Time complexity: O(E log V) (with a binary heap)
 
+Best for: Dense graphs with many edges.
 
+Advantages: Expands efficiently using adjacency and a priority queue.
 
+Conclusion
 
-Conclusion:
-For a transportation network — typically a sparse graph — Kruskal’s algorithm is preferable due to fewer operations and slightly lower runtime.
-However, both algorithms are efficient and valid choices depending on graph density and data structure availability.
-
+For a city transportation network — typically a sparse graph — Kruskal’s algorithm is preferable due to fewer operations and slightly lower runtime.
+However, both algorithms are efficient and reliable depending on graph density and data structure choices.
 4. References
 No external sources were used.
 All analysis is based on the provided assignment instructions and the generated experimental data from the Java implementation.
